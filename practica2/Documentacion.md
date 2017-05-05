@@ -7,6 +7,7 @@ ejemplo, para clonar la carpeta con el contenido del servidor web principal, en 
 máquina 2 (secundaria) ejecutaremos:
   **rsync -avz -e ssh ipmaquina1:/var/www/ /var/www/**
 
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-1.jpg)
 
 
 Vemos en la imagen anterior que se ha conectado sin pedir la contraseña de la maquina 1,
@@ -35,5 +36,6 @@ Con respecto a crontab, para establecer una tarea en cron que se ejecute cada ho
 actualizado el contenido del directorio /var/www entre las dos máquinas habría que escribir:
 (Observar la última sentencia, en la que tenemos escrita la orden rsync)
 
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-1.jpg)
 
   
