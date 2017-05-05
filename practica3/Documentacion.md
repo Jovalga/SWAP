@@ -73,7 +73,7 @@ Y vemos en la imagen anterior que el balanceo se produce satisfactoriamente.
 
 
 Nos falta someter al balanceador a una alta carga, para ello vamos a usar
-desde la máquina 4 Apache Benchmark (ab) que es una utilidad que se instala junto
+desde la máquina 4 Apache Benchmark (ab), que es una utilidad que se instala junto
 con el servidor Apache y permite comprobar el rendimiento de cualquier servidor web.
 Para utilizarlo debemos ejecutar la siguiente orden:
 **ab -n 1000 -c 10 http://192.168.2.134/index.html**  (1000 veces)
