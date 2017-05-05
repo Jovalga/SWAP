@@ -2,7 +2,7 @@
 ## Clonar la información de un sitio web
 
 Instalamos rsync mediante sudo apt-get install rsync
-Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. Por
+Para probar el funcionamiento del comando rsync vamos a clonar una carpeta cualquiera. Por
 ejemplo, para clonar la carpeta con el contenido del servidor web principal, en la
 máquina 2 (secundaria) ejecutaremos:
   **rsync -avz -e ssh ipmaquina1:/var/www/ /var/www/**
@@ -10,9 +10,9 @@ máquina 2 (secundaria) ejecutaremos:
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-1.jpg)
 
 
-Vemos en la imagen anterior que se ha conectado sin pedir la contraseña de la maquina 1,
+Vemos en la imagen anterior que se ha conectado sin pedir la contraseña de la máquina 1,
 lo normal es que nos pida la contraseña de la máquina 1 antes de la sincronización.
-Esto es debido a que lo hemos congifurado para que entre estas máquinas haya "confianza".
+Esto es debido a que lo hemos configurado para que haya "confianza" entre estas máquinas.
 Para conseguir esto hay que seguir estos pasos:
 
 - Mediante ssh-keygen, podemos generar la clave, con la opción -t para el tipo de clave.
@@ -32,9 +32,9 @@ Para conseguir esto hay que seguir estos pasos:
     
     
         
-Con respecto a crontab, para establecer una tarea en cron que se ejecute cada hora para mantener
+Con respecto a crontab, para establecer una tarea en cron que se ejecute cada hora para así mantener
 actualizado el contenido del directorio /var/www entre las dos máquinas habría que escribir:
-(Observar la última sentencia, en la que tenemos escrita la orden rsync)
+(Observar la última sentencia, donde está escrita la orden rsync)
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-1.jpg)
 
