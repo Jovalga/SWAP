@@ -1,4 +1,4 @@
-# Practica 2
+# Práctica 2
 ## Clonar la información de un sitio web
 
 Instalamos rsync mediante sudo apt-get install rsync
