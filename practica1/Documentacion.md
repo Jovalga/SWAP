@@ -15,8 +15,6 @@ Y para ver si está en ejecución:
 ps aux | grep apache
 Obtenemos lo siguiente:
 
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/practica1-2.jpg)
-
 
 Finalmente creamos en /var/www/ el archivo hola.html, en su interior escribimos lo siguiente:
 
