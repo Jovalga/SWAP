@@ -6,6 +6,9 @@ dos veces la primera, y asegurándome de que la máquina balanceadora no tiene a
 (o simplemente que no lo esté ejecutando). Por lo que ya tenemos las cuatro máquinas como se indica
 en el enunciado del guión.
 
+
+**NGINX**
+
 Una vez creado el balanceador he ejecutado las órdenes para instalar
 nginx:
 **sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get
@@ -39,6 +42,38 @@ con la misma prioridad para todos los servidores.
 
 
 
+**HAPROXY**
+
+Pasamos a haproxy. Lo instalamos con la orden:
+**sudo apt-get install haproxy**
+
+Pasamos a modificar y con ello a configurar el archivo **/etc/haproxy/haproxy.cfg**
+quedando así:
+
+Ahora lanzamos el servicio haproxy mediante el comando (parar antes nginx si se está
+usando mediante *sudo service nginx stop*):
+**sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg**
+
+Seguidamente probamos mediante **curl http://192.168.21.134 && curl http://192.168.21.134**
+si el balanceo se ejecuta correctamente. El resultado es el siguiente:
+
+
+Y vemos en la imagen anterior que el balanceo se produce satisfactoriamente.
+
+
+
+
+Nos falta someter al balanceador a una alta carga, para ello vamos a usar
+desde la máquina 4 Apache Benchmark (ab) que es una utilidad que se instala junto
+con el servidor Apache y permite comprobar el rendimiento de cualquier servidor web.
+Para utilizarlo debemos ejecutar la siguiente orden:
+**ab -n 1000 -c 10 http://192.168.2.134/index.html**  (1000 veces)
+
+El resultado de nginx es el siguiente:
+
+
+
+El resultado de haproxy es el siguiente:
 
 
 
