@@ -30,7 +30,10 @@ Para conseguir esto hay que seguir estos pasos:
     **ssh-copy-id IPmaquina1**
     
     
-    
-    
-    
-    
+        
+Con respecto a crontab, para establecer una tarea en cron que se ejecute cada hora para mantener
+actualizado el contenido del directorio /var/www entre las dos máquinas habría que escribir:
+(Observar la última sentencia, en la que tenemos escrita la orden rsync)
+
+
+  
