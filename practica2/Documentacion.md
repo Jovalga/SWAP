@@ -36,6 +36,6 @@ Con respecto a crontab, para establecer una tarea en cron que se ejecute cada ho
 actualizado el contenido del directorio /var/www entre las dos máquinas habría que escribir:
 (Observar la última sentencia, donde está escrita la orden rsync)
 
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-1.jpg)
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p2-2.jpg)
 
   
