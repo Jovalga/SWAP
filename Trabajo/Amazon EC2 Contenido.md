@@ -1,7 +1,6 @@
-###AMAZON EC2###
+### AMAZON EC2 ###
 
-Diapositiva 1
-Amazon Elastic Compute Cloud (Amazon EC2) es un servicio web que proporciona capacidad informática en la nube,
+**Amazon Elastic Compute Cloud** (Amazon EC2) es un servicio web que proporciona capacidad informática en la nube,
 segura y de tamaño modificable.
 Está diseñado para facilitar a los desarrolladores el uso de la informática en la nube a escala de la Web.
 
