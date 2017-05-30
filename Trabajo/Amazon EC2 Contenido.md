@@ -41,7 +41,7 @@ Por último, con Amazon EC2, los desarrolladores podrán disfrutar de los benefi
 
 ### Memoria ECC ###
 
-Según nuestra experiencia, la memoria de ECC es necesaria para la infraestructura de servidores y todo el hardware subyacente para Amazon EC2 utiliza la memoria de ECC.
+La memoria de ECC es necesaria para la infraestructura de servidores, y todo el hardware subyacente para Amazon EC2 utiliza la memoria de ECC.
 
 
 
