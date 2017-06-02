@@ -84,59 +84,59 @@ Para comprobar el estado del cortafuegos, debemos ejecutar:
 Para lanzar, reiniciar o parar el cortafuegos, y para salvar las reglas establecidas hasta
 ese momento, ejecutaremos respectivamente:
 
-*service iptables start
+*service iptables start*
 
-service iptables restart
+*service iptables restart*
 
-service iptables stop
+*service iptables stop*
 
-service iptables save*
+*service iptables save*
 
 
 
 También se puede parar el cortafuegos y eliminar al mismo tiempo todas sus reglas:
 
-*iptables -F
+*iptables -F*
 
-iptables -X
+*iptables -X*
 
-iptables –t nat -F
+*iptables –t nat -F*
 
-iptables –t nat -X
+*iptables –t nat -X*
 
-iptables –t mangle -F
+*iptables –t mangle -F*
 
-iptables –t mangle -X
+*iptables –t mangle -X*
 
-iptables -P INPUT ACCEPT
+*iptables -P INPUT ACCEPT*
 
-iptables -P OUTPUT ACCEPT*
+*iptables -P OUTPUT ACCEPT*
 
 
 
 Para denegar cualquier tráfico de información, podemos hacer:
 
-*iptables -P INPUT DROP
+*iptables -P INPUT DROP*
 
-iptables -P OUTPUT DROP
+*iptables -P OUTPUT DROP*
 
-iptables -P FORWARD DROP
+*iptables -P FORWARD DROP*
 
-iptables –L –n -v*
+*iptables –L –n -v*
 
 
 
 Para bloquear el tráfico de entrada, podemos hacer:
 
-*iptables -P INPUT DROP
+*iptables -P INPUT DROP*
 
-iptables -P FORWARD DROP
+*iptables -P FORWARD DROP*
 
-iptables -P OUTPUT ACCEPT
+*iptables -P OUTPUT ACCEPT*
 
-iptables -A INPUT -m state --state NEW,ESTABLISHED -j ACCEPT
+*iptables -A INPUT -m state --state NEW,ESTABLISHED -j ACCEPT*
 
-iptables –L –n -v*
+*iptables –L –n -v*
 
 
 
@@ -149,25 +149,25 @@ muerte:
 
 Abrir el puerto 22 para permitir el acceso por SSH:
 
-*iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+*iptables -A INPUT -p tcp --dport 22 -j ACCEPT*
 
-iptables -A OUTPUT -p udp --sport 22 -j ACCEPT*
+*iptables -A OUTPUT -p udp --sport 22 -j ACCEPT*
 
 
 
 Abrir los puertos HTTP/HTTPS (80 y 443) para configurar un servidor web:
 
-*iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT
+*iptables -A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT*
 
-iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT*
+*iptables -A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT*
 
 
 
 Abrir el puerto 53 para permitir el acceso a DNS:
 
-*iptables -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT
+*iptables -A INPUT -m state --state NEW -p udp --dport 53 -j ACCEPT*
 
-iptables -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT*
+*iptables -A INPUT -m state --state NEW -p tcp --dport 53 -j ACCEPT*
 
 
 
