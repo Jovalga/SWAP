@@ -42,23 +42,19 @@ Ahora ya podemos crear el directorio en el que se montará la unidad del RAID:
 
 **sudo mkdir /dat**
 
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-5.jpg)
-
 **sudo mount /dev/md0 /dat**
-
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-6.jpg)
 
 Podemos comprobar que el proceso se ha realizado adecuadamente, y también los
 parámetros con los que Linux ha conseguido montarlo usando la orden:
 
 **sudo mount**
 
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-7.jpg)
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-5.jpg)
 
 Para comprobar el estado del RAID, ejecutaremos:
 **sudo mdadm --detail /dev/md0**
 
-![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-8.jpg)
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-6.jpg)
 
 Para finalizar el proceso, conviene configurar el sistema para que monte el dispositivo
 RAID creado al arrancar el sistema. Para ello debemos editar el archivo /etc/fstab y
@@ -69,6 +65,14 @@ obtener los UUID de todos los dispositivos de almacenamiento que tenemos, debemo
 ejecutar la orden:
 
 **ls -l /dev/disk/by-uuid/**
+
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-7.jpg)
+
+
+
+![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-8.jpg)
+
+
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-9.jpg)
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-10.jpg)
