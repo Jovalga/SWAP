@@ -68,14 +68,31 @@ ejecutar la orden:
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-7.jpg)
 
-
+Anotaremos el correspondiente al dispositivo RAID que hemos creado. Ahora ya
+podemos añadir al final del archivo /etc/fstab la línea para que monte automáticamente
+el dispositivo RAID, que será similar a:
+**UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0**
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-8.jpg)
 
+Finalmente, una vez que esté funcionando el dispositivo RAID, podemos simular un
+fallo en uno de los discos:
 
+**sudo mdadm --manage --set-faulty /dev/md0 /dev/sdb**
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-9.jpg)
+
+También podemos retirar “en caliente” el disco que está marcado como que ha fallado:
+
+**sudo mdadm --manage --remove /dev/md0 /dev/sdb**
+
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-10.jpg)
+
+Y por último, podemos añadir, también “en caliente”, un nuevo disco que vendría a
+reemplazar al disco que hemos retirado:
+
+**sudo mdadm --manage --add /dev/md0 /dev/sdb**
+
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-11.jpg)
 
 
