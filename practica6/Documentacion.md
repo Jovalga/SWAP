@@ -57,11 +57,11 @@ Para comprobar el estado del RAID, ejecutaremos:
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-6.jpg)
 
 Para finalizar el proceso, conviene configurar el sistema para que monte el dispositivo
-RAID creado al arrancar el sistema. Para ello debemos editar el archivo /etc/fstab y
+RAID creado al arrancar el sistema. Para ello debemos editar el archivo **/etc/fstab** y
 añadir la línea correspondiente para montar automáticamente dicho dispositivo.
 Conviene utilizar el identificador único de cada dispositivo de almacenamiento en lugar
 de simplemente el nombre del dispositivo (aunque ambas opciones son válidas). Para
-obtener los UUID de todos los dispositivos de almacenamiento que tenemos, debemos
+obtener los **UUID** de todos los dispositivos de almacenamiento que tenemos, debemos
 ejecutar la orden:
 
 **ls -l /dev/disk/by-uuid/**
@@ -69,7 +69,7 @@ ejecutar la orden:
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p6-7.jpg)
 
 Anotaremos el correspondiente al dispositivo RAID que hemos creado. Ahora ya
-podemos añadir al final del archivo /etc/fstab la línea para que monte automáticamente
+podemos añadir al final del archivo **/etc/fstab** la línea para que monte automáticamente
 el dispositivo RAID, que será similar a:
 **UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0**
 
