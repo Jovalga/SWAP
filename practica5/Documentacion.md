@@ -57,10 +57,16 @@ Query OK, 0 rows affected (0,01 sec)
 **mysql> show tables;**
 
 +---------------------+
+
+
 | Tables_in_contactos |
+
 +---------------------+
+
 | datos |
+
 +---------------------+
+
 1 row in set (0,00 sec)
 mysql> insert into datos(nombre,tlf) values ("pepe",95834987);
 Query OK, 1 row affected (0,00 sec)
@@ -70,11 +76,17 @@ Query OK, 1 row affected (0,00 sec)
 
 **mysql> select * from datos;**
 
+
 +---------+-----------+
+
 | nombre | tlf |
+
 +---------+-----------+
+
 | pepe | 95834987 |
+
 +---------+-----------+
+
 3 rows in set (0,00 sec)
 
 ![img](https://github.com/Jovalga/SWAP/blob/master/Imagenes/p5-3.jpg)
